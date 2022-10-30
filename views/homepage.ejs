@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}The Depression Hub {% endblock %}
+
+{% block content %}
+<img src="{{url_for('static', filename='images/img1.jpg')}}" alt="">
+       <h1 style="font-size: 50px;">The place where people with depression are accepted and helped.</h1>   
+       <button type="button" class="btn btn-dark .btn-lg .btn-block open-button" onclick="openForm()" >GET STARTED</button>
+       <button type="button" class="btn btn-outline-dark .btn-lg .btn-block" >I ALREADY HAVE AN ACCOUNT</button>
+       <blockquote class="blockquote text-right">
+        <p class="mb-0">"I found that with depression, one of the most important things you could realize is that you're not alone."</p>
+        <footer class="blockquote-footer" style="margin-top: 1px;">Dwayne Johnson</footer>
+      </blockquote>
+
+      <div class="form-popup" id="myForm">
+        <form action="#" class="form-container" method="post">
+          <h1>Login</h1>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="em" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+{% endblock %}
